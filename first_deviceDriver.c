@@ -25,6 +25,6 @@ module_init(hello_world_init);
 module_exit(hello_world_exit);
  
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("EmbeTronicX <embetronicx@gmail.com>");
+MODULE_AUTHOR("23MCA027");
 MODULE_DESCRIPTION("A simple hello world driver");
 MODULE_VERSION("2:1.0");
