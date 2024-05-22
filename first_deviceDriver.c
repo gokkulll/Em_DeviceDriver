@@ -1,11 +1,3 @@
-/***************************************************************************//**
-*  \file       driver.c
-*
-*  \details    Simple hello world driver
-*
-*  \author     EmbeTronicX
-*
-* *******************************************************************************/
 #include<linux/kernel.h>
 #include<linux/init.h>
 #include<linux/module.h>
