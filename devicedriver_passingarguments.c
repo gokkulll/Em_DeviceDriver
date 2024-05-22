@@ -1,11 +1,3 @@
-/***************************************************************************//**
-*  \file       hello_world.c
-*
-*  \details    Simple hello world driver
-*
-*  \author     EmbeTronicX
-*
-* *******************************************************************************/
 #include<linux/kernel.h>
 #include<linux/init.h>
 #include<linux/module.h>
@@ -19,7 +11,7 @@ module_param(valueETX, int, S_IRUSR|S_IWUSR);                      //integer val
 module_param(nameETX, charp, S_IRUSR|S_IWUSR);                     //String
 module_param_array(arr_valueETX, int, NULL, S_IRUSR|S_IWUSR);      //Array of integers
  
-/*----------------------Module_param_cb()--------------------------------*/
+
 int notify_param(const char *val, const struct kernel_param *kp)
 {
         int res = param_set_int(val, kp); // Use helper for write variable
@@ -33,12 +25,12 @@ int notify_param(const char *val, const struct kernel_param *kp)
  
 const struct kernel_param_ops my_param_ops = 
 {
-        .set = &notify_param, // Use our setter ...
-        .get = &param_get_int, // .. and standard getter
+        .set = &notify_param, 
+        .get = &param_get_int,
 };
  
 module_param_cb(cb_valueETX, &my_param_ops, &cb_valueETX, S_IRUGO|S_IWUSR );
-/*-------------------------------------------------------------------------*/
+
 
 /*
 ** Module init function
