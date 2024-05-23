@@ -9,7 +9,7 @@ dev_t dev = 0;
 
 static int __init hello_world_init(void)
 {
-        /*Allocating Major number*/
+        /*Allocating Major,Minor number*/
         if((alloc_chrdev_region(&dev, 0, 1, "Embetronicx_Dev")) <0){
                 printk(KERN_INFO "Cannot allocate major number for device 1\n");
                 return -1;
